@@ -36,3 +36,20 @@ if (age < 18) {
         alert("Tu es majeur partout, à toi les casinos !"); 
     }
 
+// Conditions ternaires
+let x = 4;
+x > 3 ? console.log('x est supérieur à 3') : console.log('x est inférieur à 3');
+
+
+//Subway
+let departureStation = "New-York";
+let arrivalStation = prompt('Where do you want to go ?') || "Los Angeles station";
+let driver = "Carroll Shelby";
+
+if ((departureStation != "" || arrivalStation != "") && driver != "") {
+    alert('The train goes on to ' + arrivalStation + '.');
+}
+else {
+    alert('The train doesn\'t go.');
+}
+
