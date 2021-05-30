@@ -1,5 +1,4 @@
-// Training Abracadabra
-
+// Training Abracadabra 
 function abracadabra(){
     let firstName = prompt('Quel est votre prénom ?');
     let lastName  = prompt('Quel est votre nom ?');
@@ -22,3 +21,18 @@ function IMCCalculate (weight, height) {
     let height = prompt('Quelle est votre taille (en cm) ?');
 
     alert(IMCCalculate(weight, height));
+
+// T'as quel âge ?
+let age = prompt('Quel âge as-tu ?');
+age = parseInt(age);
+
+if (age < 18) { 
+        alert("Tu n'es pas majeur !"); 
+    }
+    else if(age < 21) { 
+        alert("Tu es majeur en France !"); 
+    } 
+    else { 
+        alert("Tu es majeur partout, à toi les casinos !"); 
+    }
+
