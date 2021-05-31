@@ -53,3 +53,55 @@ else {
     alert('The train doesn\'t go.');
 }
 
+// Calculator
+function addition(numberA, numberB) {
+    return numberA + numberB;
+}
+
+function multiplication(numberA, numberB) {
+    return numberA * numberB;
+}
+
+function substraction(numberA, numberB) {
+    return numberA - numberB;
+}
+
+function division(numberA, numberB) {
+    if(numberB == 0) {
+        throw new Error('Divide by zero error');
+    }
+    return numberA / numberB;
+}
+
+
+do {
+    var choice = Number(prompt('What do you want to do ?\n\n 1 - Addition\n 2 - Multiplication\n 3 - Substraction\n 4 - Division\n'));
+} while (choice != 1 && choice != 2 && choice != 3 && choice != 4);
+
+do {
+    var firstNumber  = Number(prompt('Enter your first number : '));
+    var secondNumber = Number(prompt('Enter your second number : '));
+} while (isNaN(firstNumber) || isNaN(secondNumber));
+
+try {
+    switch (choice) {
+        case 1 : 
+            var result = addition(firstNumber, secondNumber);
+            break;
+        case 2:
+            var result = multiplication(firstNumber, secondNumber);
+            break;
+        case 3 :
+            var result = substraction(firstNumber, secondNumber);
+            break;
+        case 4 :
+            var result = division(firstNumber, secondNumber);
+            break;
+        default:
+            throw new Error('Error here')
+        }
+        alert('This is result : ' + result);
+}
+catch(error) {
+    alert(error);
+}
